@@ -1,0 +1,9 @@
+{{ define "main" }}
+INDEX
+<h1>Projects</h1>
+<ul>
+{{ range where .Site.Pages "Type" "project" }}
+<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>
+{{ end }}

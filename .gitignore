@@ -1,0 +1,4 @@
+public/
+node_modules/
+.venv/
+.hugo_build.lock

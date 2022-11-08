@@ -1,0 +1,3 @@
+baseURL = 'http://lab.bitzl.io/'
+languageCode = 'en-us'
+title = 'Bitzl Lab'

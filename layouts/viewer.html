@@ -1,0 +1,16 @@
+{{ define "head" }}
+<script src="/assets/tify.js?v0.28.1"></script>
+<link rel="stylesheet" href="/assets/tify.css">
+{{ end }}
+{{ define "main" }}
+<p>{{ .Title }}</p>
+{{ if .Content }}<p>{{ .Content }}</p>{{ end }}
+<div id="tify" style="height: 1024px"></div>
+<script>
+new Tify({
+    container: '#tify',
+    manifestUrl: 'http://lab.bitzl.io/iiif/2/{{ .Page.manifestId }}/manifest',
+    view: "thumbnails"
+})
+</script>
+{{ end }}

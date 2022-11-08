@@ -1,0 +1,17 @@
+{{ define "main" }}
+LIST
+<div class="flex bg-neutral-900 justify-center">
+<div class="grid gap-1 2xl:grid-cols-6 xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 bg-neutral-900">
+  {{ range .Pages }}
+  <figure class="relative max-w-sm cursor-pointer ml-1 mt-1">
+    <a href="{{ .Permalink }}">
+      <img class="" src="http://lab.bitzl.io/iiif/2/{{ .Params.manifestId }}-03.jp2/full/512,/0/default.jpg" alt="{{ .Title }}">
+    </a>
+    <figcaption class="absolute text-center w-full bottom-0 px-4 text-lg text-white backdrop-blur-xl backdrop-brightness-50">
+      <p>{{ .Title }}</p>
+    </figcaption>
+  </figure>
+  {{ end }}
+</div>
+</div>
+{{ end }}
